@@ -1,0 +1,43 @@
+* {
+  font-family: "Times New Roman", sans-serif;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  margin-left: 10px;
+}
+
+#sponge {
+  position: fixed;
+  display: block;
+  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  margin-top: 200px;
+  width: 50%;
+  height: auto;
+}
+
+body {
+    background: url(background.png) no-repeat center center fixed;
+    -webkit-background-size: cover;
+}
+
+h1 {
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin-top: 11%;
+  font-size: 50px;
+  word-wrap: break-word;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 30px;
+    }
+}

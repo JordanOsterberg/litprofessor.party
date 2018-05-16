@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>lIt prOfesSoR</title>
+  </head>
+  <body>
+    <h1 id="text" onclick="generateNewOption()"></h1>
+
+    <img id="sponge" src="sponge.png"/>
+
+    <footer>
+      <p id="createdby">created by jordan osterberg</p>
+    </footer>
+
+    <script type="text/javascript">
+      (function() {
+        generateNewOption();
+
+        document.getElementById("createdby").innerHTML = spongebob("created by jordan osterberg");
+      }());
+
+        function generateNewOption() {
+            var text = document.getElementById("text");
+
+            var previousValue = text.innerHTML;
+
+            var options = ["Every Trip Is a Quest (Except When It's Not)", "Nice to Eat with You: Acts of Communion", "Nice to Eat You: Acts of Vampires", "If It's Square, It's a Sonnet", "Now, Where Have I Seen Her Before?", "When in Doubt, It's from Shakespeare...", "...Or the Bible", "Hanseldee and Greteldum", "It's Greek to Me", "It's More Than Just Rain or Snow", "...More Than It's Gonna Hurt You: Concerning Violence", "Is That a Symbol?", "It's All Political", "Yes, Shes a Christ Figure, Too", "Flights of Fancy", "It's All About Sex...", "...Except the Sex", "If She Comes Up, It's Baptism", "Geography Matters...", "...So Does Season", "Marked for Greatness", "He's Blind for a Reason, You Know", "It's Never Just Heart Disease...", "...And Rarely Just Illness", "D&#777;&#768;&#768;&#835;&#795;&#855;&#781;&#795;&#782;&#790;&#791;&#804;&#801;&#813;&#805;o&#771;&#795;&#849;&#862;&#849;&#772;&#800;&#860;&#811;&#809;&#805;&#812;&#858;&#824;n&#780;&#849;&#844;&#856;&#786;&#796;&#809;&#826;&#804;&#804;&#808;&#803;&#810;&#801;&#824;'&#843;&#777;&#831;&#778;&#833;&#789;&#786;&#830;&#788;&#846;&#800;&#866;&#828;&#808;&#803;&#802;&#823;t&#850;&#862;&#832;&#778;&#780;&#787;&#788;&#779;&#768;&#840;&#860;&#800;&#851;&#854;&#819;&#825;&#845;&#826;&#845; R&#784;&#775;&#834;&#784;&#777;&#859;&#778;&#784;&#826;&#854;&#790;&#858;&#801;e&#830;&#848;&#864;&#785;&#833;&#853;&#806;&#793;&#858;&#813;&#857;&#863;&#811;&#805;&#798;a&#859;&#865;&#832;&#835;&#795;&#861;&#783;&#856;&#855;&#774;&#804;&#846;&#851;&#805;&#846;&#837;&#840;&#804;&#866;&#810;&#824;d&#774;&#775;&#859;&#831;&#781;&#778;&#829;&#769;&#841;&#866;&#792;&#793;&#796;&#790; w&#780;&#789;&#771;&#833;&#785;&#861;&#795;&#862;&#856;&#819;&#840;&#826;&#805;&#816;&#810;&#863;&#840;&#805;&#803;i&#865;&#777;&#848;&#795;&#838;&#784;&#855;&#780;&#797;&#812;&#852;&#799;&#817;&#866;&#818;&#802;t&#777;&#838;&#855;&#784;&#794;&#850;&#825;&#845;&#810;&#857;&#819;&#851;&#790;h&#831;&#830;&#769;&#782;&#787;&#864;&#781;&#777;&#836;&#793;&#804;&#813;&#809;&#808;&#808;&#839;&#839;&#824; Y&#843;&#855;&#771;&#795;&#788;&#843;&#811;&#851;&#819;&#840;&#812;&#857;o&#780;&#850;&#771;&#838;&#779;&#771;&#774;&#838;&#866;&#803;&#841;&#816;&#811;&#791;&#809;&#815;&#827;&#797;&#820;u&#855;&#832;&#769;&#859;&#795;&#842;&#770;&#839;&#816;&#816;&#800;&#854;&#845;&#817;&#827;&#823;r&#783;&#832;&#838;&#781;&#843;&#799;&#803;&#819;&#800;&#818;&#799;&#797;&#814;&#813;&#824; E&#773;&#772;&#833;&#780;&#771;&#862;&#832;&#862;&#777;&#781;&#840;&#799;&#813;&#858;&#809;&#824;y&#770;&#861;&#786;&#861;&#788;&#853;&#803;&#858;&#817;&#806;&#814;&#804;&#799;e&#833;&#850;&#859;&#856;&#855;&#829;&#846;&#840;&#817;&#857;&#791;&#807;&#803;s&#861;&#787;&#833;&#770;&#842;&#830;&#783;&#844;&#794;&#778;&#803;&#812;&#818;&#792;&#812;&#805;&#857;", "Is He Serious? And Other Ironies", "A Test Case"];
+
+            var newValue = options[Math.floor(Math.random() * options.length)].toLowerCase();
+
+            if (newValue === previousValue) {
+                generateNewOption();
+                return;
+            }
+
+            text.innerHTML = spongebob(newValue);
+        }
+
+        function spongebob(string) {
+          var capitalOptions = [true, false];
+          var value = "";
+
+          for (var x = 0; x < string.length; x++) {
+              var shouldCapitalize = capitalOptions[Math.floor(Math.random() * capitalOptions.length)];
+              if (shouldCapitalize) {
+                value += string.charAt(x).toUpperCase();
+              } else {
+                value += string.charAt(x);
+              }
+          }
+
+          return value;
+        }
+    </script>
+  </body>
+</html>
